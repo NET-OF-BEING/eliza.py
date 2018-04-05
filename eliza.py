@@ -300,10 +300,10 @@ def command_interface():
   therapist = eliza();
   while s != 'quit':
     try:
-      s = input('> ')
+      s = raw_input('> ')
     except EOFError:
       s = 'quit'
-    print(s)
+    #print(s)
     while s[-1] in '!.':
       s = s[:-1]
     print(therapist.respond(s))
