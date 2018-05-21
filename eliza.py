@@ -19,8 +19,11 @@ def say(text):
         cmd = ('say -v ' + str(sys.argv[1]) + ' ' + text)
     else:
         cmd = ('say ' + text)
-    subprocess.call(cmd, shell=True)
-
+    try:
+        subprocess.call(cmd, shell= True)
+    except Exception as e:
+        print("Cannot locate voice " + sys.argv[1])
+ 
 class eliza:
     def __init__(self):
         self.keys = list(map(lambda x: re.compile(x[0], re.IGNORECASE), gPats))
