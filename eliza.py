@@ -299,6 +299,7 @@ gPats = [
       "I see.",
       "Very interesting.",
       "%1.",
+      "What's your point?",
       "I see.  And what does that tell you?",
       "How does that make you feel?",
       "How do you feel when you say that?"]]
@@ -320,7 +321,7 @@ def command_interface():
     while text != 'quit':
         try:
 #------------------------------------------------------------------------
-#l isten for response using the speech recongtion module
+#l listen for response using the speech recongtion module
 #i in  accoradance with the microphone input
 #------------------------------------------------------------------------
             r = sr.Recognizer()
