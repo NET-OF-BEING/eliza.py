@@ -24,6 +24,7 @@ def say(text):
     except Exception as e:
         print("Cannot locate voice " + sys.argv[1])
  
+
 class eliza:
     def __init__(self):
         self.keys = list(map(lambda x: re.compile(x[0], re.IGNORECASE), gPats))
@@ -100,7 +101,7 @@ gReflections = {
 # ----------------------------------------------------------------------
 gPats = [
     [r'I need (.*)',
-     ["Why do you need %1?",
+     ["What is it about %1 that you feel that you need %1",
       "Would it really help you to get %1?",
       "Are you sure you need %1?"]],
 
